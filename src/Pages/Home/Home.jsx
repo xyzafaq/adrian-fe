@@ -31,7 +31,31 @@ function Home() {
                 </div>
         </section> 
         <section className={Classes.s2}>
-            
+            <div>
+                <div className={Classes.s2_left_con}>
+                    <div className={Classes.s2_l_img_con1} >
+                        <img src={img1} />
+                    </div>
+                    <div className={Classes.img_2_con} >
+                        <div className={Classes.s2_2_img_con1} >
+                            <img src={img2} />
+                        </div>
+                        <div className={Classes.s2_3_img_con1} >
+                            <img src={img3} />
+                        </div>
+                    </div>
+                </div>
+                <div className={Classes.s2_right_con} >
+                    <h1>About Us</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry orem Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry orem Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown.
+                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.
+                    </p>
+                </div>
+            </div>
         </section> 
     </>
   )
