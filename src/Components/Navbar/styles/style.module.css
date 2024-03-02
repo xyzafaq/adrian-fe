@@ -1,0 +1,44 @@
+.nav_con {
+    border-bottom: 1px solid #E4E7EC;
+    background-color: white;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.nav_left{
+    padding-left: 7%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav_img{
+    height: 2rem;
+}
+.nav_img img{
+    height: 100%;
+}
+.nav_right {
+    padding-right: 7%;
+}
+
+.nav_elem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.elem {
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.elem h5{
+    font-weight: 300;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.elem h5:hover{
+    color: black;
+}
