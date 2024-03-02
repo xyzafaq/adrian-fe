@@ -4,7 +4,9 @@ import imageHero from '../../utils/images/hero-right.png'
 import img1 from '../../utils/images/img1.jpg'
 import img2 from '../../utils/images/img2.jpg'
 import img3 from '../../utils/images/img3.jpg'
-
+import locationIcon from '../../utils/icons/locationIcon.png'
+import phoneIcon from '../../utils/icons/phoneIcon.png'
+import emailIcon from '../../utils/icons/emailIcon.png'
 function Home() {
   return (
     <>
@@ -64,7 +66,37 @@ function Home() {
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
+        <section className={Classes.s3}>
+            <div>
+                <div className={Classes.s3_main_left} >
+                    <div className={Classes.s3_left_con}>
+                        <h1>Let's talk with us</h1>
+                        <p>Questions, comments, or suggestions? Simply <br/> fill in the form and we’ll be in touch shortly.</p>
+                        <div className={Classes.s3_address_con} >
+                            <img src={locationIcon} />
+                            <h1>
+                                1055 Arthur ave Elk Groot, 67. <br/>
+                                New Palmas South Carolina.
+                            </h1>
+                        </div>
+                        <div className={Classes.s3_phone_con} >
+                            <img src={phoneIcon} />
+                            <h1>+1 234 678 9108 99</h1>
+                        </div>
+                        <div className={Classes.s3_phone_con} >
+                            <img src={emailIcon} />
+                            <h1>Contact@moralizer.com</h1>
+                        </div>
+                    </div>
+                </div>
+                <div className={Classes.s3_main_right} >
+                    <div className={Classes.s3_right_con}>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
     </>
   )
 }
