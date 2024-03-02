@@ -54,6 +54,14 @@ function Home() {
                         has been the industry's standard dummy text ever since the 1500s, when an unknown.
                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.
                     </p>
+                    <div className={Classes.s2_two_txt_con} >
+                        <h4>Need your simple <br/> help for save children.</h4>
+                        <div className={Classes.v_line} ></div>
+                        <h4>Need your simple <br/> help for save children.</h4>
+                    </div>
+                    <div>
+                        <button><h5>Book Now</h5></button>
+                    </div>
                 </div>
             </div>
         </section> 
