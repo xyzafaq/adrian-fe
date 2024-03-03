@@ -24,7 +24,7 @@ function Navbar() {
                 <NavLink to='/customer-signup' className={Classes.elem} >
                   <h5>Customer</h5>
                 </NavLink>
-                <NavLink to='/admin' className={Classes.elem} >
+                <NavLink to='/admin-login' className={Classes.elem} >
                   <h5>Admin</h5>
                 </NavLink>
                 {/* <div className={Classes.elem} >

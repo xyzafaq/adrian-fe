@@ -1,0 +1,97 @@
+.s1{
+    height: 90vh;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+.form{
+    border: 1px solid rgba(56, 65, 74, 0.11);
+    background: #FFFFFF;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 20rem;
+    height: max-content;
+}
+.form > h1{
+    text-align: center;
+    font-size: 24px;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    color: #414141;
+    margin-bottom: 1rem;
+}
+.google_con{
+    background: #5985E5;
+    border-radius: 10px;
+    color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+.google_con img{
+    height: 1.5rem;
+}
+.google_con h5{
+    font-size: 14px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+.or_con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+.or_con hr{
+    width: 40%;
+    border: none;
+    border-bottom: 1px solid #c5c5c5;
+}
+.or_con h1{
+    margin: 0 5px;
+}
+.form input{
+    width: 100%;
+    border: 1px solid rgba(30, 30, 30, 0.1);
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #1e1e1eb3;
+    outline: none;
+    margin-bottom: .8rem;
+}
+.form button{
+    background-color: #3792DE;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+.form > h5{
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+    margin: 13px 0;
+    cursor: pointer;
+}
+.form > h5 a{
+    color: rgba(30, 30, 30, 0.7);
+    text-decoration: none;
+}
+.form > h5:hover{
+    text-decoration: underline;
+}
