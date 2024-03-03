@@ -1,17 +1,33 @@
 import React, { useState } from 'react'
 import Classes from './styles/style.module.css'
-import img1 from '../../utils/images/img1.jpg'
+import plane from '../../utils/images/plane.jpg'
 import plane1 from '../../utils/icons/plane1.png'
 import plane2 from '../../utils/icons/plane2.png'
 import rotate from '../../utils/icons/rotate.png'
 import search from '../../utils/icons/search.png'
 
-function Booking() {    
+function Booking() {
+  const [formdata,setformdata] = useState({
+    from: '',
+    to: '',
+    flyDate: '',
+    returnDate: '',
+  });
+  function changeValue(event){
+    const {name,value} = event.target;
+    setformdata({
+      ...formdata,
+      [name]: value,
+    });
+  }
+  const handleSubmit = async (e)=>{
+      e.preventDefault();
+  }
   return (
     <>
         <section className={Classes.s1} >
-            <img src={img1} />
-            <div className={Classes.booking_con} >
+            <img src={plane} />
+            <form onSubmit={handleSubmit} className={Classes.booking_con} >
               <h1>Book a Jet.</h1>
               <div className={Classes.selections} >
                 <h5>Passengers</h5>
@@ -33,7 +49,10 @@ function Booking() {
               <div className={Classes.filters_con} >
                 <div className={Classes.input_con} >
                   <img src={plane1} />
-                  <select>
+                  <select 
+                    name='from'
+                    onChange={changeValue}
+                  >
                     <option value='' >From?</option>
                     <option value='Istanbul, Turkey' >Istanbul, Turkey</option>
                     <option value='Moscow, Russia' >Moscow, Russia</option>
@@ -52,7 +71,10 @@ function Booking() {
                 </div>
                 <div className={Classes.input_con} >
                   <img src={plane2} />
-                  <select>
+                  <select
+                    name='to'
+                    onChange={changeValue}
+                  >
                     <option value='' >To?</option>
                     <option value='Istanbul, Turkey' >Istanbul, Turkey</option>
                     <option value='Moscow, Russia' >Moscow, Russia</option>
@@ -71,6 +93,7 @@ function Booking() {
                     name='flyDate'
                     placeholder='flyDate'
                     type='date'
+                    onChange={changeValue}
                   />
                 </div>
                 <div className={Classes.input_con_date} >
@@ -78,13 +101,163 @@ function Booking() {
                     name='returnDate'
                     placeholder='returnDate'
                     type='date'
+                    onChange={changeValue}
                   />
                 </div>
-                <div className={Classes.input_con_mini2} >
+                <button type='text' className={Classes.input_con_mini2} >
                   <img src={search} />
+                </button>
+              </div>
+            </form>
+        </section>
+        <section className={Classes.s2} >
+          <h1>My Bookings</h1>
+          <div className={Classes.booking_list_con} >
+            <div className={Classes.booking_list_elem} >
+              <div>
+                <div className={Classes.b_list_line1} >
+                  <h5 className={Classes.text}> <span>Name:</span> John Doe </h5>
+                  <h5 className={Classes.text}> <span>Flight Id:</span> 89735654068 </h5>
+                </div>
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+                <hr />
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className={Classes.b_list_line1} >
+                  <h5 className={Classes.text}> <span>Name:</span> John Doe </h5>
+                  <h5 className={Classes.text}> <span>Flight Id:</span> 89735654068 </h5>
+                </div>
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+                <hr />
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
                 </div>
               </div>
             </div>
+            <div className={Classes.booking_list_elem} >
+              <div>
+                <div className={Classes.b_list_line1} >
+                  <h5 className={Classes.text}> <span>Name:</span> John Doe </h5>
+                  <h5 className={Classes.text}> <span>Flight Id:</span> 89735654068 </h5>
+                </div>
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+                <hr />
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className={Classes.b_list_line1} >
+                  <h5 className={Classes.text}> <span>Name:</span> John Doe </h5>
+                  <h5 className={Classes.text}> <span>Flight Id:</span> 89735654068 </h5>
+                </div>
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+                <hr />
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={Classes.booking_list_elem} >
+              <div>
+                <div className={Classes.b_list_line1} >
+                  <h5 className={Classes.text}> <span>Name:</span> John Doe </h5>
+                  <h5 className={Classes.text}> <span>Flight Id:</span> 89735654068 </h5>
+                </div>
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+                <hr />
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className={Classes.b_list_line1} >
+                  <h5 className={Classes.text}> <span>Name:</span> John Doe </h5>
+                  <h5 className={Classes.text}> <span>Flight Id:</span> 89735654068 </h5>
+                </div>
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+                <hr />
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
     </>
   )
