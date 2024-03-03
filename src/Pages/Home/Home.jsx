@@ -155,6 +155,68 @@ function Home() {
                 </div>
             </div>
         </section>
+        <section className={Classes.s4}>
+            <div>
+                <h1>Pricing</h1>
+                <div className={Classes.s4_list_con} >
+                    <div className={Classes.s4_list_head} >
+                    <div>From</div>
+                    <div>To</div>
+                    <div>Price</div>
+                    </div>
+                    <div className={Classes.s4_list_elem} >
+                    <div>Istanbul, Turkey</div>
+                    <div>London, United Kingdom</div>
+                    <div>$10,000 to $20,000</div>
+                    </div>
+                    <div className={Classes.s4_list_elem} >
+                    <div>Istanbul, Turkey</div>
+                    <div>London, United Kingdom</div>
+                    <div>$10,000 to $20,000</div>
+                    </div>
+                    <div className={Classes.s4_list_elem} >
+                    <div>Istanbul, Turkey</div>
+                    <div>London, United Kingdom</div>
+                    <div>$10,000 to $20,000</div>
+                    </div>
+                    <div className={Classes.s4_list_elem} >
+                    <div>Istanbul, Turkey</div>
+                    <div>London, United Kingdom</div>
+                    <div>$10,000 to $20,000</div>
+                    </div>
+                    <div className={Classes.s4_list_elem} >
+                    <div>Istanbul, Turkey</div>
+                    <div>London, United Kingdom</div>
+                    <div>$10,000 to $20,000</div>
+                    </div>
+                    <div className={Classes.s4_list_elem} >
+                    <div>Istanbul, Turkey</div>
+                    <div>London, United Kingdom</div>
+                    <div>$10,000 to $20,000</div>
+                    </div>
+                    <div className={Classes.s4_list_elem} >
+                    <div>Istanbul, Turkey</div>
+                    <div>London, United Kingdom</div>
+                    <div>$10,000 to $20,000</div>
+                    </div>
+                    <div className={Classes.s4_list_elem} >
+                    <div>Istanbul, Turkey</div>
+                    <div>London, United Kingdom</div>
+                    <div>$10,000 to $20,000</div>
+                    </div>
+                    <div className={Classes.s4_list_elem} >
+                    <div>Istanbul, Turkey</div>
+                    <div>London, United Kingdom</div>
+                    <div>$10,000 to $20,000</div>
+                    </div>
+                    <div className={Classes.s4_list_elem} >
+                    <div>Istanbul, Turkey</div>
+                    <div>London, United Kingdom</div>
+                    <div>$10,000 to $20,000</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </>
   )
 }
