@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import Classes from './styles/style.module.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import googleIcon from '../../utils/icons/googleIcon.png'
 
 function UserLogin() {
+  const Navigate = useNavigate();
   const [formdata,setformdata] = useState({
     email: '',
     password: '',
@@ -16,7 +17,8 @@ function UserLogin() {
     });
   }
   const handleSubmit = async (e)=>{
-      e.preventDefault();
+    e.preventDefault();
+    Navigate('/booking');
   }
   return (
     <>

@@ -13,7 +13,7 @@ function Navbar() {
                     <MenuIcon/>
                 </div>
                 <div className={Classes.nav_img} >
-                    <img src={logo} alt='logo' />
+                    <img src={logo} alt='logo' onClick={() => window.location.href = '/'}  />
                 </div>
             </div>
             <div className={Classes.nav_right} >

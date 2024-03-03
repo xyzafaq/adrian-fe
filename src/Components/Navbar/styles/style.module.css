@@ -19,6 +19,7 @@
 }
 .nav_img img{
     height: 100%;
+    cursor: pointer;
 }
 .nav_right {
     padding-right: 7%;
