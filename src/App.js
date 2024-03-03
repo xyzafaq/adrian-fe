@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar';
 import UserSignup from './Pages/UserSignup/UserSignup';
 import UserLogin from './Pages/UserLogin/UserLogin';
 import AdminLogin from './Pages/AdminLogin/AdminLogin';
+import Booking from './Pages/Booking/Booking';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path='/customer-signup' element={<UserSignup/>} />
         <Route path='/customer-login' element={<UserLogin/>} />
         <Route path='/admin-login' element={<AdminLogin/>} />
+        <Route path='/booking' element={<Booking/>} />
+        <Route path='*' element={<Home/>} />
       </Routes>
     </div>
   );

@@ -7,6 +7,7 @@ import img3 from '../../utils/images/img3.jpg'
 import locationIcon from '../../utils/icons/locationIcon.png'
 import phoneIcon from '../../utils/icons/phoneIcon.png'
 import emailIcon from '../../utils/icons/emailIcon.png'
+import { useNavigate } from 'react-router-dom'
 const Pricing = [
     {
         from: 'Istanbul, Turkey',
@@ -73,6 +74,7 @@ function Home() {
     const handleSubmit = async (e)=>{
         e.preventDefault();
     }
+    const Navigate = useNavigate();
 
   return (
     <>
@@ -86,7 +88,7 @@ function Home() {
                             <button>
                                 <h5>All Causes</h5>
                             </button>
-                            <button>
+                            <button onClick={()=>{Navigate('/Booking')}} >
                                 <h5>Book Now</h5>
                             </button>
                         </div>
