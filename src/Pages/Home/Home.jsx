@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Classes from './styles/style.module.css'
 import imageHero from '../../utils/images/hero-right.png'
 import img1 from '../../utils/images/img1.jpg'
@@ -8,6 +8,20 @@ import locationIcon from '../../utils/icons/locationIcon.png'
 import phoneIcon from '../../utils/icons/phoneIcon.png'
 import emailIcon from '../../utils/icons/emailIcon.png'
 function Home() {
+    const [formdata,setformdata] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: '',
+    });
+    const handleChange = (event)=>{
+        const {name,value} = event.taget;
+        setformdata({
+            ...formdata,
+            [name]: value,
+        })
+    }
   return (
     <>
         <section className={Classes.s1}>
@@ -91,9 +105,53 @@ function Home() {
                     </div>
                 </div>
                 <div className={Classes.s3_main_right} >
-                    <div className={Classes.s3_right_con}>
-                        
-                    </div>
+                    <form className={Classes.s3_right_con}>
+                        <div className={Classes.input_l1_con} >
+                            <input
+                                type='text'
+                                placeholder='First Name'
+                                name='firstName'
+                                value={formdata.firstName}
+                                onChange={handleChange}
+                                className={`${Classes.input_1} ${Classes.wid45}`}
+                            />
+                            <input
+                                type='text'
+                                placeholder='Last Name'
+                                name='lastName'
+                                value={formdata.lastName}
+                                onChange={handleChange}
+                                className={`${Classes.input_1} ${Classes.wid45}`}
+                            />
+                        </div>
+                        <input
+                            type='text'
+                            placeholder='Email'
+                            name='email'
+                            value={formdata.email}
+                            onChange={handleChange}
+                            className={Classes.input_1}
+                        />
+                        <input
+                            type='text'
+                            placeholder='Phone'
+                            name='phone'
+                            value={formdata.phone}
+                            onChange={handleChange}
+                            className={Classes.input_1}
+                        />
+                        <textarea
+                            type='text'
+                            placeholder='Message'
+                            name='message'
+                            value={formdata.message}
+                            onChange={handleChange}
+                            className={Classes.input_1}
+                            rows={9}
+                        >
+                        </textarea>
+                        <button>Send Message</button>
+                    </form>
                 </div>
             </div>
         </section>
