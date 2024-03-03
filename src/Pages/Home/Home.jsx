@@ -7,6 +7,54 @@ import img3 from '../../utils/images/img3.jpg'
 import locationIcon from '../../utils/icons/locationIcon.png'
 import phoneIcon from '../../utils/icons/phoneIcon.png'
 import emailIcon from '../../utils/icons/emailIcon.png'
+const Pricing = [
+    {
+        from: 'Istanbul, Turkey',
+        to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+]
+
 function Home() {
     const [formdata,setformdata] = useState({
         firstName: '',
@@ -15,13 +63,17 @@ function Home() {
         phone: '',
         message: '',
     });
-    const handleChange = (event)=>{
-        const {name,value} = event.taget;
+    function changeValue(event){
+        const {name,value} = event.target;
         setformdata({
-            ...formdata,
-            [name]: value,
-        })
+          ...formdata,
+          [name]: value,
+        });
     }
+    const handleSubmit = async (e)=>{
+        e.preventDefault();
+    }
+
   return (
     <>
         <section className={Classes.s1}>
@@ -105,14 +157,14 @@ function Home() {
                     </div>
                 </div>
                 <div className={Classes.s3_main_right} >
-                    <form className={Classes.s3_right_con}>
+                    <form onSubmit={handleSubmit} className={Classes.s3_right_con}>
                         <div className={Classes.input_l1_con} >
                             <input
                                 type='text'
                                 placeholder='First Name'
                                 name='firstName'
                                 value={formdata.firstName}
-                                onChange={handleChange}
+                                onChange={changeValue}
                                 className={`${Classes.input_1} ${Classes.wid45}`}
                             />
                             <input
@@ -120,7 +172,7 @@ function Home() {
                                 placeholder='Last Name'
                                 name='lastName'
                                 value={formdata.lastName}
-                                onChange={handleChange}
+                                onChange={changeValue}
                                 className={`${Classes.input_1} ${Classes.wid45}`}
                             />
                         </div>
@@ -129,15 +181,16 @@ function Home() {
                             placeholder='Email'
                             name='email'
                             value={formdata.email}
-                            onChange={handleChange}
+                            onChange={changeValue}
                             className={Classes.input_1}
+                            required
                         />
                         <input
                             type='text'
                             placeholder='Phone'
                             name='phone'
                             value={formdata.phone}
-                            onChange={handleChange}
+                            onChange={changeValue}
                             className={Classes.input_1}
                         />
                         <textarea
@@ -145,12 +198,12 @@ function Home() {
                             placeholder='Message'
                             name='message'
                             value={formdata.message}
-                            onChange={handleChange}
+                            onChange={changeValue}
                             className={Classes.input_1}
                             rows={9}
                         >
                         </textarea>
-                        <button>Send Message</button>
+                        <button type='submit'>Send Message</button>
                     </form>
                 </div>
             </div>
@@ -158,62 +211,22 @@ function Home() {
         <section className={Classes.s4}>
             <div>
                 <h1>Pricing</h1>
-                <div className={Classes.s4_list_con} >
-                    <div className={Classes.s4_list_head} >
+                <div className={Classes.s4_list_head} >
                     <div>From</div>
                     <div>To</div>
                     <div>Price</div>
-                    </div>
-                    <div className={Classes.s4_list_elem} >
-                    <div>Istanbul, Turkey</div>
-                    <div>London, United Kingdom</div>
-                    <div>$10,000 to $20,000</div>
-                    </div>
-                    <div className={Classes.s4_list_elem} >
-                    <div>Istanbul, Turkey</div>
-                    <div>London, United Kingdom</div>
-                    <div>$10,000 to $20,000</div>
-                    </div>
-                    <div className={Classes.s4_list_elem} >
-                    <div>Istanbul, Turkey</div>
-                    <div>London, United Kingdom</div>
-                    <div>$10,000 to $20,000</div>
-                    </div>
-                    <div className={Classes.s4_list_elem} >
-                    <div>Istanbul, Turkey</div>
-                    <div>London, United Kingdom</div>
-                    <div>$10,000 to $20,000</div>
-                    </div>
-                    <div className={Classes.s4_list_elem} >
-                    <div>Istanbul, Turkey</div>
-                    <div>London, United Kingdom</div>
-                    <div>$10,000 to $20,000</div>
-                    </div>
-                    <div className={Classes.s4_list_elem} >
-                    <div>Istanbul, Turkey</div>
-                    <div>London, United Kingdom</div>
-                    <div>$10,000 to $20,000</div>
-                    </div>
-                    <div className={Classes.s4_list_elem} >
-                    <div>Istanbul, Turkey</div>
-                    <div>London, United Kingdom</div>
-                    <div>$10,000 to $20,000</div>
-                    </div>
-                    <div className={Classes.s4_list_elem} >
-                    <div>Istanbul, Turkey</div>
-                    <div>London, United Kingdom</div>
-                    <div>$10,000 to $20,000</div>
-                    </div>
-                    <div className={Classes.s4_list_elem} >
-                    <div>Istanbul, Turkey</div>
-                    <div>London, United Kingdom</div>
-                    <div>$10,000 to $20,000</div>
-                    </div>
-                    <div className={Classes.s4_list_elem} >
-                    <div>Istanbul, Turkey</div>
-                    <div>London, United Kingdom</div>
-                    <div>$10,000 to $20,000</div>
-                    </div>
+                </div>
+                <div className={Classes.s4_list_con} >
+                    { Pricing && Pricing.map((val,key)=>{
+                        return(
+                            <div className={Classes.s4_list_elem} >
+                                <div> {val.from} </div>
+                                <div> {val.to} </div>
+                                <div> {val.price} </div>
+                            </div>
+                        )
+                    })
+                    }
                 </div>
             </div>
         </section>
