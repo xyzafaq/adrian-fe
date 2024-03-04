@@ -1,4 +1,6 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import { auth,provider } from '../../config';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import Classes from './styles/style.module.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import googleIcon from '../../utils/icons/googleIcon.png'
@@ -36,6 +38,20 @@ function UserSignup() {
     }
     Navigate('/customer-login');
   }
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, new GoogleAuthProvider())
+    .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("User signed in:", user);
+        Navigate('/booking');
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error("Google sign-in error:", errorCode, errorMessage);
+    });
+  };
+
   return (
     <>
       <>
@@ -77,7 +93,7 @@ function UserSignup() {
           <div className={Classes.right_con} >
             <form onSubmit={handleSubmit} className={Classes.form} >
               <h1>Sign Up</h1>
-              <div className={Classes.google_con} >
+              <div className={Classes.google_con} onClick={handleGoogleSignIn} >
                 <img src={googleIcon} alt='google-icon' />
                 <h5>Continue with Google</h5>
               </div>
