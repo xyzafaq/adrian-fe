@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Classes from './styles/style.module.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import googleIcon from '../../utils/icons/googleIcon.png'
+import AnimHeading1 from '../../Components/ScrollEffect/AnimHeading1';
 
 function AdminLogin() {
   const Navigate = useNavigate();
@@ -22,7 +23,8 @@ function AdminLogin() {
   }
   return (
     <>
-      <section className={Classes.s1}>
+      <AnimHeading1>
+        <section className={Classes.s1}>
         <form onSubmit={handleSubmit} className={Classes.form} >
           <h1>Admin Login</h1>
           <div className={Classes.google_con} >
@@ -55,7 +57,8 @@ function AdminLogin() {
             <NavLink to='/customer-login'>Forget Password?</NavLink>
           </h5>
         </form>
-      </section> 
+        </section> 
+      </AnimHeading1>
     </>
   )
 }

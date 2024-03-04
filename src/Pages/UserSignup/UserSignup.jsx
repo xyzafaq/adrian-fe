@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Classes from './styles/style.module.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import googleIcon from '../../utils/icons/googleIcon.png'
+import AnimHeading1 from '../../Components/ScrollEffect/AnimHeading1';
 
 function UserSignup() {
   const Navigate = useNavigate();
@@ -23,7 +24,8 @@ function UserSignup() {
   }
   return (
     <>
-      <section className={Classes.s1}>
+      <AnimHeading1>
+        <section className={Classes.s1}>
         <div>
           <div className={Classes.left_con} >
             <div className={Classes.txt_con} >
@@ -93,7 +95,8 @@ function UserSignup() {
             </div>
           </div>
         </div>
-      </section> 
+        </section> 
+      </AnimHeading1>
     </>
   )
 }

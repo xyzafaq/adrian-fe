@@ -5,6 +5,7 @@ import plane1 from '../../utils/icons/plane1.png'
 import plane2 from '../../utils/icons/plane2.png'
 import rotate from '../../utils/icons/rotate.png'
 import search from '../../utils/icons/search.png'
+import AnimHeading1 from '../../Components/ScrollEffect/AnimHeading1'
 
 function Booking() {
   const [formdata,setformdata] = useState({
@@ -27,7 +28,7 @@ function Booking() {
     <>
         <section className={Classes.s1} >
             <img src={plane} />
-            <form onSubmit={handleSubmit} className={Classes.booking_con} >
+              <form onSubmit={handleSubmit} className={Classes.booking_con} >
               <h1>Book a Jet.</h1>
               <div className={Classes.selections} >
                 <h5>Passengers</h5>
@@ -108,9 +109,10 @@ function Booking() {
                   <img src={search} />
                 </button>
               </div>
-            </form>
+              </form>
         </section>
-        <section className={Classes.s2} >
+        <AnimHeading1>
+          <section className={Classes.s2} >
           <h1>My Bookings</h1>
           <div className={Classes.booking_list_con} >
             <div className={Classes.booking_list_elem} >
@@ -258,7 +260,8 @@ function Booking() {
               </div>
             </div>
           </div>
-        </section>
+          </section>
+      </AnimHeading1>
     </>
   )
 }

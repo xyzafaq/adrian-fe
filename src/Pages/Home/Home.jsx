@@ -9,6 +9,7 @@ import phoneIcon from '../../utils/icons/phoneIcon.png'
 import emailIcon from '../../utils/icons/emailIcon.png'
 import { useNavigate } from 'react-router-dom'
 import LoginRequiredPopup from '../../Components/LoginRequiredPopup.jsx/LoginRequiredPopup'
+import AnimHeading1 from '../../Components/ScrollEffect/AnimHeading1'
 const Pricing = [
     {
         from: 'Istanbul, Turkey',
@@ -86,7 +87,8 @@ function Home() {
 
   return (
     <>
-        <section className={Classes.s1}>
+        <AnimHeading1>
+            <section className={Classes.s1}>
                 <div>
                     <div className={Classes.left_con} >
                         <div className={Classes.txt_con} >
@@ -107,7 +109,8 @@ function Home() {
                         <img src={imageHero} alt='hero-image' />
                     </div>
                 </div>
-        </section> 
+            </section>
+        </AnimHeading1>
         <section className={Classes.s2}>
             <div>
                 <div className={Classes.s2_left_con}>
@@ -125,7 +128,7 @@ function Home() {
                 </div>
                 <div className={Classes.s2_right_con} >
                     <h1>About Us</h1>
-                    <p>
+                    <p> 
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry orem Ipsum
                         has been the industry's standard dummy text ever since the 1500s, when an unknown.
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry orem Ipsum
@@ -133,7 +136,7 @@ function Home() {
                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.
                     </p>
                     <div className={Classes.s2_two_txt_con} >
-                        <h4>Need your simple <br/> help for save children.</h4>
+                        <h4>  Need your simple <br/> help for save children.</h4>
                         <div className={Classes.v_line} ></div>
                         <h4>Need your simple <br/> help for save children.</h4>
                     </div>
@@ -143,8 +146,9 @@ function Home() {
                 </div>
             </div>
         </section>
-        <section className={Classes.s3}>
-            <div>
+        <AnimHeading1>
+            <section className={Classes.s3}>
+                <div>
                 <div className={Classes.s3_main_left} >
                     <div className={Classes.s3_left_con}>
                         <h1>Let's talk with us</h1>
@@ -216,8 +220,9 @@ function Home() {
                         <button type='submit'>Send Message</button>
                     </form>
                 </div>
-            </div>
-        </section>
+                </div>
+            </section>
+        </AnimHeading1>
         <section className={Classes.s4}>
             <div>
                 <h1>Pricing</h1>
@@ -229,11 +234,13 @@ function Home() {
                 <div className={Classes.s4_list_con} >
                     { Pricing && Pricing.map((val,key)=>{
                         return(
+                            <AnimHeading1>
                             <div className={Classes.s4_list_elem} >
                                 <div> {val.from} </div>
                                 <div> {val.to} </div>
                                 <div> {val.price} </div>
                             </div>
+                            </AnimHeading1>
                         )
                     })
                     }
