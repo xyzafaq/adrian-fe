@@ -3,8 +3,15 @@ import Classes from './styles/style.module.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import googleIcon from '../../utils/icons/googleIcon.png'
 import AnimHeading1 from '../../Components/ScrollEffect/AnimHeading1';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 function UserLogin() {
+  const passwordRegex = /^(?=.*[A-Z]).{8,}$/;
+  const [validFail,setvalidFail] = useState(false);
   const Navigate = useNavigate();
   const [formdata,setformdata] = useState({
     email: '',
@@ -19,10 +26,29 @@ function UserLogin() {
   }
   const handleSubmit = async (e)=>{
     e.preventDefault();
+    if (!passwordRegex.test(formdata.password)) {
+      setvalidFail(true);
+      setTimeout(() => {
+        setvalidFail(false);
+      }, 3000);
+      return;
+    }
     Navigate('/booking');
   }
   return (
-    <>
+    <> 
+      <>
+        {/* <Snackbar open={open1} autoHideDuration={6000} anchorOrigin={{ vertical: 'top', horizontal: 'center' }} >
+          <Alert severity="success" sx={{ width: '100%' }}>
+            Product updated successfully!
+          </Alert>
+        </Snackbar> */}
+        <Snackbar open={validFail} autoHideDuration={6000} anchorOrigin={{ vertical: 'top', horizontal: 'center' }} >
+          <Alert severity="error" sx={{ width: '100%' }}>
+            Password must be at least 8 characters long and contain at least one capital letter
+          </Alert>
+        </Snackbar>
+      </>
       <AnimHeading1>
         <section className={Classes.s1}>
         <div>

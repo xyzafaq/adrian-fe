@@ -13,7 +13,12 @@ import AnimHeading1 from '../../Components/ScrollEffect/AnimHeading1'
 const Pricing = [
     {
         from: 'Istanbul, Turkey',
-        to: 'London, United Kingdom',
+        to: 'Moscow, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Moscow, Russia',
+        to: 'Istanbul, Turkey',
         price: '$10,000 to $20,000',
     },
     {
@@ -22,8 +27,143 @@ const Pricing = [
         price: '$10,000 to $20,000',
     },
     {
+        from: 'London, United Kingdom',
+        to: 'Istanbul, Turkey',
+        price: '$10,000 to $20,000',
+    },
+    {
         from: 'Istanbul, Turkey',
+        to: 'Saint Petersburg, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Berlin, Germany',
+        to: 'Istanbul, Turkey',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'Madrid, Spain',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'Barcelona, Spain',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Barcelona, Spain',
+        to: 'Istanbul, Turkey',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'Rome, Italy',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Rome, Italy',
+        to: 'Istanbul, Turkey',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'Paris, France',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Paris, France',
+        to: 'Istanbul, Turkey',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'Bucharest, Romania',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Bucharest, Romania',
+        to: 'Istanbul, Turkey',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Moscow, Russia',
+        to: 'Istanbul, Turkey',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Istanbul, Turkey',
+        to: 'Moscow, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Moscow, Russia',
         to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'London, United Kingdom',
+        to: 'Moscow, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Moscow, Russia',
+        to: 'Saint Petersburg, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Berlin, Germany',
+        to: 'Moscow, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Moscow, Russia',
+        to: 'Madrid, Spain',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Moscow, Russia',
+        to: 'Barcelona, Spain',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Barcelona, Spain',
+        to: 'Moscow, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Moscow, Russia',
+        to: 'Rome, Italy',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Rome, Italy',
+        to: 'Moscow, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Moscow, Russia',
+        to: 'Paris, France',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Paris, France',
+        to: 'Moscow, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Moscow, Russia',
+        to: 'Bucharest, Romania',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Bucharest, Romania',
+        to: 'Moscow, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'London, United Kingdom',
+        to: 'Istanbul, Turkey',
         price: '$10,000 to $20,000',
     },
     {
@@ -32,27 +172,67 @@ const Pricing = [
         price: '$10,000 to $20,000',
     },
     {
-        from: 'Istanbul, Turkey',
+        from: 'London, United Kingdom',
+        to: 'Moscow, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Moscow, Russia',
         to: 'London, United Kingdom',
         price: '$10,000 to $20,000',
     },
     {
-        from: 'Istanbul, Turkey',
+        from: 'London, United Kingdom',
+        to: 'Saint Petersburg, Russia',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Berlin, Germany',
         to: 'London, United Kingdom',
         price: '$10,000 to $20,000',
     },
     {
-        from: 'Istanbul, Turkey',
+        from: 'London, United Kingdom',
+        to: 'Madrid, Spain',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'London, United Kingdom',
+        to: 'Barcelona, Spain',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Barcelona, Spain',
         to: 'London, United Kingdom',
         price: '$10,000 to $20,000',
     },
     {
-        from: 'Istanbul, Turkey',
+        from: 'London, United Kingdom',
+        to: 'Rome, Italy',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Rome, Italy',
         to: 'London, United Kingdom',
         price: '$10,000 to $20,000',
     },
     {
-        from: 'Istanbul, Turkey',
+        from: 'London, United Kingdom',
+        to: 'Paris, France',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Paris, France',
+        to: 'London, United Kingdom',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'London, United Kingdom',
+        to: 'Bucharest, Romania',
+        price: '$10,000 to $20,000',
+    },
+    {
+        from: 'Bucharest, Romania',
         to: 'London, United Kingdom',
         price: '$10,000 to $20,000',
     },

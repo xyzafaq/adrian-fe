@@ -26,7 +26,7 @@ function Booking() {
   }
   return (
     <>
-        <section className={Classes.s1} >
+      <section className={Classes.s1} >
             <img src={plane} />
               <form onSubmit={handleSubmit} className={Classes.booking_con} >
               <h1>Book a Jet.</h1>
@@ -110,9 +110,9 @@ function Booking() {
                 </button>
               </div>
               </form>
-        </section>
-        <AnimHeading1>
-          <section className={Classes.s2} >
+      </section>
+      <AnimHeading1>
+        <section className={Classes.s2} >
           <h1>My Bookings</h1>
           <div className={Classes.booking_list_con} >
             <div className={Classes.booking_list_elem} >
@@ -260,7 +260,7 @@ function Booking() {
               </div>
             </div>
           </div>
-          </section>
+        </section>
       </AnimHeading1>
     </>
   )
