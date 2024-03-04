@@ -1,0 +1,63 @@
+.confirm_bg{
+    background-color: rgba(0, 0, 0, 0.50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+.confirm_con{
+    background-color: white;
+    /* height: 25rem; */
+    width: 30rem;
+    border: 1px solid rgba(152, 152, 152, 0.305);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+.confirm_con h1{
+    font-size: 22px;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    color: #2A2A2A;
+    margin: .7rem 0;
+}
+.confirm_con > h5{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.btn_con{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.btn_con > button:nth-child(1){
+    background-color: white;
+    padding: 6px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1.5px solid #5F6980;
+    border-radius: 6px;
+}
+.btn_con > button:nth-child(1) h5{
+    color: black;
+}
+.btn_con > button:nth-child(2){
+    border: 1.5px solid #FD7E14;
+    background-color: white;
+    padding: 6px 15px;
+    cursor: pointer;
+    background: #FD7E14;
+    border-radius: 6px;
+}
+.btn_con > button:nth-child(2) h5{
+    color: white;
+}

@@ -8,6 +8,7 @@ import locationIcon from '../../utils/icons/locationIcon.png'
 import phoneIcon from '../../utils/icons/phoneIcon.png'
 import emailIcon from '../../utils/icons/emailIcon.png'
 import { useNavigate } from 'react-router-dom'
+import LoginRequiredPopup from '../../Components/LoginRequiredPopup.jsx/LoginRequiredPopup'
 const Pricing = [
     {
         from: 'Istanbul, Turkey',
@@ -57,6 +58,13 @@ const Pricing = [
 ]
 
 function Home() {
+    const [openLoginRequired,setopenLoginRequired] = useState(false);
+    const handleopenLoginRequired = ()=>{
+        setopenLoginRequired(true);
+    }
+    const handleCloseLoginRequired = ()=>{
+        setopenLoginRequired(false)
+    }
     const [formdata,setformdata] = useState({
         firstName: '',
         lastName: '',
@@ -88,7 +96,7 @@ function Home() {
                             <button>
                                 <h5>All Causes</h5>
                             </button>
-                            <button onClick={()=>{Navigate('/Booking')}} >
+                            <button onClick={handleopenLoginRequired} >
                                 <h5>Book Now</h5>
                             </button>
                         </div>
@@ -232,6 +240,9 @@ function Home() {
                 </div>
             </div>
         </section>
+        { openLoginRequired &&
+            <LoginRequiredPopup handleCloseLoginRequired={handleCloseLoginRequired} />
+        }
     </>
   )
 }

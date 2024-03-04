@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Classes from './styles/style.module.css'
-import deleteIcon from '../../utils/icons/deleteIcon.png'
+import UserComp from './UserComp'
 
 function AdminManage() {
   return (
@@ -14,76 +14,14 @@ function AdminManage() {
             <h5>Flights</h5>
           </div>
           <div className={Classes.all_acc_con} >
-            <div className={Classes.all_acc_elem} >
-              <h5>John Doe</h5>
-              <h5>johndoe@gmail.com</h5>
-              <h5>2 Jan, 2024</h5>
-              <h5>5</h5>
-              <img src={deleteIcon} />
-            </div>
-            <div className={Classes.all_acc_elem} >
-              <h5>John Doe</h5>
-              <h5>johndoe@gmail.com</h5>
-              <h5>2 Jan, 2024</h5>
-              <h5>5</h5>
-              <img src={deleteIcon} />
-            </div>
-            <div className={Classes.all_acc_elem} >
-              <h5>John Doe</h5>
-              <h5>johndoe@gmail.com</h5>
-              <h5>2 Jan, 2024</h5>
-              <h5>5</h5>
-              <img src={deleteIcon} />
-            </div>
-            <div className={Classes.all_acc_elem} >
-              <h5>John Doe</h5>
-              <h5>johndoe@gmail.com</h5>
-              <h5>2 Jan, 2024</h5>
-              <h5>5</h5>
-              <img src={deleteIcon} />
-            </div>
-            <div className={Classes.all_acc_elem} >
-              <h5>John Doe</h5>
-              <h5>johndoe@gmail.com</h5>
-              <h5>2 Jan, 2024</h5>
-              <h5>5</h5>
-              <img src={deleteIcon} />
-            </div>
-            <div className={Classes.all_acc_elem} >
-              <h5>John Doe</h5>
-              <h5>johndoe@gmail.com</h5>
-              <h5>2 Jan, 2024</h5>
-              <h5>5</h5>
-              <img src={deleteIcon} />
-            </div>
-            <div className={Classes.all_acc_elem} >
-              <h5>John Doe</h5>
-              <h5>johndoe@gmail.com</h5>
-              <h5>2 Jan, 2024</h5>
-              <h5>5</h5>
-              <img src={deleteIcon} />
-            </div>
-            <div className={Classes.all_acc_elem} >
-              <h5>John Doe</h5>
-              <h5>johndoe@gmail.com</h5>
-              <h5>2 Jan, 2024</h5>
-              <h5>5</h5>
-              <img src={deleteIcon} />
-            </div>
-            <div className={Classes.all_acc_elem} >
-              <h5>John Doe</h5>
-              <h5>johndoe@gmail.com</h5>
-              <h5>2 Jan, 2024</h5>
-              <h5>5</h5>
-              <img src={deleteIcon} />
-            </div>
-            <div className={Classes.all_acc_elem} >
-              <h5>John Doe</h5>
-              <h5>johndoe@gmail.com</h5>
-              <h5>2 Jan, 2024</h5>
-              <h5>5</h5>
-              <img src={deleteIcon} />
-            </div>
+            <UserComp />
+            <UserComp />
+            <UserComp />
+            <UserComp />
+            <UserComp />
+            <UserComp />
+            <UserComp />
+            <UserComp />
           </div>
         </section>
         <section className={Classes.s2} >
