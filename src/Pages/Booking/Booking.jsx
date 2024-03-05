@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Classes from './styles/style.module.css'
 import plane from '../../utils/images/plane.jpg'
 import plane1 from '../../utils/icons/plane1.png'
@@ -6,8 +6,22 @@ import plane2 from '../../utils/icons/plane2.png'
 import rotate from '../../utils/icons/rotate.png'
 import search from '../../utils/icons/search.png'
 import AnimHeading1 from '../../Components/ScrollEffect/AnimHeading1'
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 function Booking() {
+  const handleFlyDateChange = (date) => {
+    setformdata({
+      ...formdata,
+      flyDate: date,
+    })
+  };
+  const handleReturnDateChange = (date) => {
+    setformdata({
+      ...formdata,
+      returnDate: date,
+    })
+  };
   const [formdata,setformdata] = useState({
     from: '',
     to: '',
@@ -90,21 +104,19 @@ function Booking() {
                   </select>
                 </div>
                 <div className={Classes.input_con_date} >
-                  <input 
-                    name='flyDate'
-                    placeholder='flyDate'
-                    type='date'
-                    onChange={changeValue}
-                    value={formdata.flyDate}
+                  <DatePicker
+                    selected={formdata.flyDate}
+                    onChange={handleFlyDateChange}
+                    placeholderText="dd/mm/yyyy"
+                    dateFormat="dd/MM/yyyy"
                   />
                 </div>
                 <div className={Classes.input_con_date} >
-                  <input 
-                    name='returnDate'
-                    placeholder='dd/mm/yyyy'
-                    type='date'
-                    onChange={changeValue}
-                    value={formdata.returnDate}
+                <DatePicker
+                    selected={formdata.returnDate}
+                    onChange={handleReturnDateChange}
+                    placeholderText="dd/mm/yyyy"
+                    dateFormat="dd/MM/yyyy"
                   />
                 </div>
                 <button type='text' className={Classes.input_con_mini2} >
@@ -125,7 +137,7 @@ function Booking() {
                 </div>
                 <div className={Classes.b_list_line2} >
                   <div>
-                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Turweston Aerodrome </h5>
                   </div>
                   <div>
                     <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
@@ -134,7 +146,7 @@ function Booking() {
                 <hr />
                 <div className={Classes.b_list_line2} >
                   <div>
-                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Leonardo da Vinci Fiumicino </h5>
                   </div>
                   <div>
                     <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
@@ -148,7 +160,7 @@ function Booking() {
                 </div>
                 <div className={Classes.b_list_line2} >
                   <div>
-                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Turweston Aerodrome </h5>
                   </div>
                   <div>
                     <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
@@ -157,55 +169,7 @@ function Booking() {
                 <hr />
                 <div className={Classes.b_list_line2} >
                   <div>
-                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
-                  </div>
-                  <div>
-                    <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={Classes.booking_list_elem} >
-              <div>
-                <div className={Classes.b_list_line1} >
-                  <h5 className={Classes.text}> <span>Name:</span> John Doe </h5>
-                  <h5 className={Classes.text}> <span>Flight Id:</span> 89735654068 </h5>
-                </div>
-                <div className={Classes.b_list_line2} >
-                  <div>
-                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
-                  </div>
-                  <div>
-                    <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
-                  </div>
-                </div>
-                <hr />
-                <div className={Classes.b_list_line2} >
-                  <div>
-                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
-                  </div>
-                  <div>
-                    <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className={Classes.b_list_line1} >
-                  <h5 className={Classes.text}> <span>Name:</span> John Doe </h5>
-                  <h5 className={Classes.text}> <span>Flight Id:</span> 89735654068 </h5>
-                </div>
-                <div className={Classes.b_list_line2} >
-                  <div>
-                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
-                  </div>
-                  <div>
-                    <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
-                  </div>
-                </div>
-                <hr />
-                <div className={Classes.b_list_line2} >
-                  <div>
-                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Leonardo da Vinci Fiumicino </h5>
                   </div>
                   <div>
                     <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
@@ -221,7 +185,7 @@ function Booking() {
                 </div>
                 <div className={Classes.b_list_line2} >
                   <div>
-                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Turweston Aerodrome </h5>
                   </div>
                   <div>
                     <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
@@ -230,7 +194,7 @@ function Booking() {
                 <hr />
                 <div className={Classes.b_list_line2} >
                   <div>
-                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Leonardo da Vinci Fiumicino </h5>
                   </div>
                   <div>
                     <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
@@ -244,7 +208,7 @@ function Booking() {
                 </div>
                 <div className={Classes.b_list_line2} >
                   <div>
-                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Turweston Aerodrome </h5>
                   </div>
                   <div>
                     <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
@@ -253,7 +217,55 @@ function Booking() {
                 <hr />
                 <div className={Classes.b_list_line2} >
                   <div>
-                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Lorem Ipsum, lorem ipsum </h5>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Leonardo da Vinci Fiumicino </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={Classes.booking_list_elem} >
+              <div>
+                <div className={Classes.b_list_line1} >
+                  <h5 className={Classes.text}> <span>Name:</span> John Doe </h5>
+                  <h5 className={Classes.text}> <span>Flight Id:</span> 89735654068 </h5>
+                </div>
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Turweston Aerodrome </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+                <hr />
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Leonardo da Vinci Fiumicino </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className={Classes.b_list_line1} >
+                  <h5 className={Classes.text}> <span>Name:</span> John Doe </h5>
+                  <h5 className={Classes.text}> <span>Flight Id:</span> 89735654068 </h5>
+                </div>
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Airport:</span> <br/> Turweston Aerodrome </h5>
+                  </div>
+                  <div>
+                    <h5 className={Classes.text}> <span>Departure Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>
+                  </div>
+                </div>
+                <hr />
+                <div className={Classes.b_list_line2} >
+                  <div>
+                    <h5 className={Classes.text}> <span>Arrival Airport:</span> <br/> Leonardo da Vinci Fiumicino </h5>
                   </div>
                   <div>
                     <h5 className={Classes.text}> <span>Arrival Time:</span> <br/> 1 March, 2024 -- 3:30 AM </h5>

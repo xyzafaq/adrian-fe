@@ -23,6 +23,7 @@
 }
 .nav_txt{
     height: 2.5rem;
+    cursor: pointer;
 }
 .nav_txt h1:nth-child(1) {
     font-size: 22px;

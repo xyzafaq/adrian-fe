@@ -116,6 +116,10 @@
     border: 1px solid rgba(30, 30, 30, 0.2);
     border-radius: 10px;
 }
+.input_con_date h1{
+    font-size: 12px;
+    color: #000000f0;
+}
 .input_con_date input{
     height: 100%;
     width: 100%;

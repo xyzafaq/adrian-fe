@@ -18,7 +18,7 @@ function Navbar() {
                 {/* <div className={Classes.nav_img} >
                     <img src={logo2} alt='logo' onClick={() => window.location.href = '/'}  />
                 </div> */}
-                  <div className={Classes.nav_txt} >
+                  <div className={Classes.nav_txt} onClick={() => window.location.href = '/'} >
                     <h1>SKY STREAM</h1>
                     <h1>CHARTERS</h1>
                   </div>
