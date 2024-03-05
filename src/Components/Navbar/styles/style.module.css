@@ -21,9 +21,26 @@
     height: 100%;
     cursor: pointer;
 }
+.nav_txt{
+    height: 2.5rem;
+}
+.nav_txt h1:nth-child(1) {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: "Audiowide", sans-serif;
+}
+.nav_txt h1:nth-child(2) {
+    letter-spacing: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 0;
+    text-align: center;
+}
+
 .nav_right {
     padding-right: 7%;
 }
+
 
 .nav_elem {
     display: flex;

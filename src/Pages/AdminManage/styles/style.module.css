@@ -54,6 +54,7 @@
     
 }
 .booking_list_elem{
+    position: relative;
     background: #FFFFFF;
     border: 1px solid rgba(234, 234, 234, 0.93);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
@@ -63,6 +64,13 @@
     display: grid;
     grid-template-columns: 50% 50%;
     margin-bottom: 10px;
+}
+.booking_list_elem > img{
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    height: 1.3rem;
+    cursor: pointer;
 }
 .booking_list_elem > div{
     /* border: 1px solid black; */
@@ -95,7 +103,7 @@ hr{
 
 .confirm_bg{
     background-color: rgba(0, 0, 0, 0.50);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;

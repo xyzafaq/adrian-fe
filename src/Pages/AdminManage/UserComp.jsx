@@ -21,7 +21,9 @@ function UserComp() {
           <img onClick={handleopenConfirmDelete} src={deleteIcon} />
         </div>
         { openConfirmDelete &&
-            <ConfirmDeletePopup handleCloseConfirmDelete={handleCloseConfirmDelete} />
+            <ConfirmDeletePopup handleCloseConfirmDelete={handleCloseConfirmDelete}
+                title={'Delete Account?'} description={`Are you sure you want to delete Afaq's account?`}
+            />
         }
     </>
   )

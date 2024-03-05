@@ -95,14 +95,16 @@ function Booking() {
                     placeholder='flyDate'
                     type='date'
                     onChange={changeValue}
+                    value={formdata.flyDate}
                   />
                 </div>
                 <div className={Classes.input_con_date} >
                   <input 
                     name='returnDate'
-                    placeholder='returnDate'
+                    placeholder='dd/mm/yyyy'
                     type='date'
                     onChange={changeValue}
+                    value={formdata.returnDate}
                   />
                 </div>
                 <button type='text' className={Classes.input_con_mini2} >

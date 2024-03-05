@@ -2,6 +2,9 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Classes from './styles/style.module.css'
 import logo from '../../utils/images/logo.svg'
+import logo2 from '../../utils/images/logo2.png'
+import logo3 from '../../utils/images/logo3.png'
+import logo4 from '../../utils/images/logo4.webp'
 import { MenuIcon } from '../../utils/SVGs/svgs'
 
 function Navbar() {
@@ -12,9 +15,13 @@ function Navbar() {
                 <div>
                     <MenuIcon/>
                 </div>
-                <div className={Classes.nav_img} >
-                    <img src={logo} alt='logo' onClick={() => window.location.href = '/'}  />
-                </div>
+                {/* <div className={Classes.nav_img} >
+                    <img src={logo2} alt='logo' onClick={() => window.location.href = '/'}  />
+                </div> */}
+                  <div className={Classes.nav_txt} >
+                    <h1>SKY STREAM</h1>
+                    <h1>CHARTERS</h1>
+                  </div>
             </div>
             <div className={Classes.nav_right} >
               <div className={Classes.nav_elem} >
@@ -25,7 +32,7 @@ function Navbar() {
                   <h5>Customer</h5>
                 </NavLink>
                 <NavLink to='/admin-login' className={Classes.elem} >
-                  <h5>Admin</h5>
+                  <h5>Administrator</h5>
                 </NavLink>
                 {/* <div className={Classes.elem} >
                   <h5>LOGOUT</h5>

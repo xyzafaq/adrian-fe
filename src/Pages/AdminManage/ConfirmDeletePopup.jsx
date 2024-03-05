@@ -2,7 +2,7 @@ import React from 'react'
 import Classes from './styles/style.module.css'
 import deleteBoxIcon from '../../utils/icons/deleteBoxIcon.png'
 
-function ConfirmDeletePopup({handleCloseConfirmDelete}) {
+function ConfirmDeletePopup({handleCloseConfirmDelete,title,description}) {
   const handleConfirm = async (event)=>{
     handleCloseConfirmDelete();
   }
@@ -20,8 +20,8 @@ function ConfirmDeletePopup({handleCloseConfirmDelete}) {
       <div className={Classes.confirm_bg} onClick={handleBgClick} >
         <div className={Classes.confirm_con} onClick={handleMainClick} >
           <img src={deleteBoxIcon} alt='delete-icon' />
-          <h1>Delete Account</h1>
-          <h5>Are you sure you want to delete Afaq's account?</h5>
+          <h1> {title} </h1>
+          <h5>{description} </h5>
           <div className={Classes.btn_con} >
             <button onClick={handleCancel} >
               <h5>Cancel</h5>
