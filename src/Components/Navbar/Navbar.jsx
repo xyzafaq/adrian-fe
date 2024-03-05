@@ -5,6 +5,7 @@ import logo from '../../utils/images/logo.svg'
 import logo2 from '../../utils/images/logo2.png'
 import logo3 from '../../utils/images/logo3.png'
 import logo4 from '../../utils/images/logo4.webp'
+import logo5 from '../../utils/images/logo5.png'
 import { MenuIcon } from '../../utils/SVGs/svgs'
 
 function Navbar() {
@@ -15,13 +16,13 @@ function Navbar() {
                 <div>
                     <MenuIcon/>
                 </div>
-                {/* <div className={Classes.nav_img} >
-                    <img src={logo2} alt='logo' onClick={() => window.location.href = '/'}  />
-                </div> */}
-                  <div className={Classes.nav_txt} onClick={() => window.location.href = '/'} >
+                <div className={Classes.nav_img} >
+                    <img src={logo5} alt='logo' onClick={() => window.location.href = '/'}  />
+                </div>
+                  {/* <div className={Classes.nav_txt} onClick={() => window.location.href = '/'} >
                     <h1>SKY STREAM</h1>
                     <h1>CHARTERS</h1>
-                  </div>
+                  </div> */}
             </div>
             <div className={Classes.nav_right} >
               <div className={Classes.nav_elem} >

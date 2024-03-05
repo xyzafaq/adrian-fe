@@ -15,14 +15,14 @@
     gap: 20px;
 }
 .nav_img{
-    height: 2rem;
+    height: 3rem;
 }
 .nav_img img{
     height: 100%;
     cursor: pointer;
 }
 .nav_txt{
-    height: 2.5rem;
+    height: 3rem;
     cursor: pointer;
 }
 .nav_txt h1:nth-child(1) {
